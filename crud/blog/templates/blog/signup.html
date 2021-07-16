@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %} 
+    <form mehtod="post" action="{% url 'signup' %}">
+        {% csrf_token %} 
+        {{ form1.as_p }}
+        {{ form2.as_p }}
+        <button type="submit">가입</button>
+    </form>
+{% endblock %}

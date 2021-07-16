@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %} 
+    <form mehtod="post" action="{% url 'login' %}">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit">로그인</button>
+    </form>
+{% endblock %}
